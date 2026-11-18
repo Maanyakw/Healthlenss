@@ -1,0 +1,197 @@
+{
+  "prevalence": {
+    "all": 0.08825015605029278,
+    "hba1c": {
+      "normal": 0.0,
+      "prediabetes": 0.08319209548880314,
+      "diabetes": 0.2581769055745165
+    },
+    "glucose": {
+      "normal": 0.0,
+      "elevated": 0.0,
+      "high": 0.0784921312675369,
+      "very_high": 0.3680010819583446
+    },
+    "bmi": {
+      "underweight": 0.005848930481283422,
+      "healthy": 0.038198917804689515,
+      "overweight": 0.07994428022967418,
+      "obese": 0.1809115937595595
+    },
+    "age": {
+      "young": 0.004698846646732166,
+      "adult": 0.023801984378298502,
+      "midlife": 0.10152744870696173,
+      "older": 0.2035008335317933
+    },
+    "gender": {
+      "Female": 0.07919104553548716,
+      "Male": 0.10097941092364884
+    },
+    "hypertension": 0.281706379707917,
+    "heart_disease": 0.3289134438305709
+  },
+  "thresholds": {
+    "moderate": 0.0451,
+    "high": 0.5
+  },
+  "metrics": {
+    "decision_threshold_for_screening_metrics": 0.0451,
+    "test_overall": {
+      "n": 14420,
+      "positives": 1272,
+      "roc_auc": 0.9781488635428686,
+      "pr_auc": 0.8835805195753433,
+      "recall": 0.9716981132075472,
+      "precision": 0.37488626023657873,
+      "specificity": 0.8432461210830544,
+      "tp": 1236,
+      "fp": 2061,
+      "fn": 36,
+      "tn": 11087
+    },
+    "test_by_gender": {
+      "Female": {
+        "n": 8425,
+        "positives": 667,
+        "roc_auc": 0.9780068395809829,
+        "pr_auc": 0.8748775063110614,
+        "recall": 0.9700149925037481,
+        "precision": 0.3620593172915501,
+        "specificity": 0.8530549110595514,
+        "tp": 647,
+        "fp": 1140,
+        "fn": 20,
+        "tn": 6618
+      },
+      "Male": {
+        "n": 5995,
+        "positives": 605,
+        "roc_auc": 0.9782469832410801,
+        "pr_auc": 0.8929930066020563,
+        "recall": 0.9735537190082645,
+        "precision": 0.39006622516556294,
+        "specificity": 0.8291280148423006,
+        "tp": 589,
+        "fp": 921,
+        "fn": 16,
+        "tn": 4469
+      }
+    },
+    "brier": 0.023617784980837254,
+    "ece": 0.0022632964416195575,
+    "n_trees": 197,
+    "baseline_rule_hba1c>=6.5_or_glucose>=200": {
+      "recall": 0.7861635220125787,
+      "precision": 0.24545900834560627
+    },
+    "tier_distribution_test": {
+      "low": 0.7713592233009708,
+      "moderate": 0.16775312066574202,
+      "high": 0.0608876560332871
+    },
+    "tier_observed_prevalence_test": {
+      "low": 0.003236536905511103,
+      "moderate": 0.1537825547747003,
+      "high": 0.9840546697038725
+    }
+  },
+  "dataset": {
+    "raw_rows": 100000,
+    "raw_gender_counts": {
+      "Female": 58552,
+      "Male": 41430,
+      "Other": 18
+    },
+    "dropped_other_gender_rows": 18,
+    "dropped_duplicate_rows": 3854,
+    "rows_used": 96128,
+    "split": {
+      "train": 67286,
+      "validation": 14422,
+      "test": 14420
+    },
+    "by_gender": {
+      "Female": {
+        "rows": 56161,
+        "share": 0.5842314414114514,
+        "diabetes_rate": 0.07918306297964779
+      },
+      "Male": {
+        "rows": 39967,
+        "share": 0.4157685585885486,
+        "diabetes_rate": 0.10095829058973653
+      }
+    },
+    "diabetes_rate": 0.08823651797603196,
+    "feature_ranges": {
+      "age": [
+        0.08,
+        80.0
+      ],
+      "bmi": [
+        10.01,
+        95.69
+      ],
+      "hba1c": [
+        3.5,
+        9.0
+      ],
+      "glucose": [
+        80.0,
+        300.0
+      ]
+    },
+    "source": "Diabetes prediction dataset (Kaggle, 100,000 records)"
+  },
+  "comparison": [
+    {
+      "name": "TabPFN-3.5",
+      "role": "primary",
+      "status": "not benchmarked yet: run ml/notebooks/HealthLens_v3_Benchmark.ipynb"
+    },
+    {
+      "name": "XGBoost",
+      "role": "comparison",
+      "cv_auc": 0.9788,
+      "test_auc": 0.9781,
+      "test_auc_ci95": [
+        0.9752,
+        0.9806
+      ],
+      "screening_threshold": 0.0478,
+      "recall": 0.967,
+      "precision": 0.3805,
+      "brier": 0.0237
+    },
+    {
+      "name": "Logistic regression",
+      "role": "comparison",
+      "cv_auc": 0.9614,
+      "test_auc": 0.9592,
+      "test_auc_ci95": [
+        0.9548,
+        0.9632
+      ],
+      "screening_threshold": 0.0307,
+      "recall": 0.9583,
+      "precision": 0.2906,
+      "brier": 0.0333
+    },
+    {
+      "name": "Gradient boosting (HGB)",
+      "role": "server stand-in",
+      "cv_auc": 0.9786,
+      "test_auc": 0.9781,
+      "test_auc_ci95": [
+        0.9751,
+        0.9808
+      ],
+      "screening_threshold": 0.0451,
+      "recall": 0.9717,
+      "precision": 0.3749,
+      "brier": 0.0236
+    }
+  ],
+  "primary_model": "TabPFN-3.5"
+}

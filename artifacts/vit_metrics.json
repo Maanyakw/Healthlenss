@@ -1,0 +1,138 @@
+{
+  "parameters": 845268,
+  "steps_run": 9000,
+  "train_samples": 80000,
+  "train_fonts": 22,
+  "held_out_fonts": 6,
+  "chunk_exact_match_train_fonts": 0.81,
+  "chunk_cer_train_fonts": 0.026778001727613014,
+  "chunk_exact_match_heldout_fonts": 0.7446666666666667,
+  "chunk_cer_heldout_fonts": 0.03154647847829135,
+  "examples_wrong_heldout": [
+    [
+      "Smoking Status - (L)",
+      "Smking Status - (L)"
+    ],
+    [
+      "Glucose - 503 MG/DL",
+      "Glucose - 5D3 MG/DL"
+    ],
+    [
+      "Glycated Hemoglobin (HbA1c)",
+      "Glycated Hemoglobin (HbAc)"
+    ],
+    [
+      "77 - 109 mg/dL",
+      "7 - 109 mg/dL"
+    ],
+    [
+      "Normal low high",
+      "Normal ow high"
+    ],
+    [
+      "Blood Sugar (Random)",
+      "Blood Sugar (Ramdom)"
+    ],
+    [
+      "Diagnostic Centre",
+      "Diagnostio Centre"
+    ],
+    [
+      "Borderline",
+      "Borderine"
+    ]
+  ],
+  "history": [
+    {
+      "step": 500,
+      "val_seen": 0.12466666666666666,
+      "cer_seen": 0.3504654957289567
+    },
+    {
+      "step": 1000,
+      "val_seen": 0.30333333333333334,
+      "cer_seen": 0.17732028025722238
+    },
+    {
+      "step": 1500,
+      "val_seen": 0.38866666666666666,
+      "cer_seen": 0.13772914867069777
+    },
+    {
+      "step": 2000,
+      "val_seen": 0.49,
+      "cer_seen": 0.10135329686150302
+    },
+    {
+      "step": 2500,
+      "val_seen": 0.5206666666666667,
+      "cer_seen": 0.08863614550340723
+    },
+    {
+      "step": 3000,
+      "val_seen": 0.5786666666666667,
+      "cer_seen": 0.07467127363470583
+    },
+    {
+      "step": 3500,
+      "val_seen": 0.6066666666666667,
+      "cer_seen": 0.06488146655149246
+    },
+    {
+      "step": 4000,
+      "val_seen": 0.658,
+      "cer_seen": 0.05307611095114694
+    },
+    {
+      "step": 4500,
+      "val_seen": 0.6826666666666666,
+      "cer_seen": 0.047845282656684904
+    },
+    {
+      "step": 5000,
+      "val_seen": 0.7153333333333334,
+      "cer_seen": 0.04251847586140704
+    },
+    {
+      "step": 5500,
+      "val_seen": 0.7293333333333333,
+      "cer_seen": 0.03992705633937998
+    },
+    {
+      "step": 6000,
+      "val_seen": 0.7533333333333333,
+      "cer_seen": 0.0361359055571552
+    },
+    {
+      "step": 6500,
+      "val_seen": 0.7713333333333333,
+      "cer_seen": 0.03368845378635186
+    },
+    {
+      "step": 7000,
+      "val_seen": 0.79,
+      "cer_seen": 0.031720894519627604
+    },
+    {
+      "step": 7500,
+      "val_seen": 0.8026666666666666,
+      "cer_seen": 0.029513389000863807
+    },
+    {
+      "step": 8000,
+      "val_seen": 0.8066666666666666,
+      "cer_seen": 0.027785775986179095
+    },
+    {
+      "step": 8500,
+      "val_seen": 0.8053333333333333,
+      "cer_seen": 0.027497840483731644
+    },
+    {
+      "step": 9000,
+      "val_seen": 0.81,
+      "cer_seen": 0.026778001727613014
+    }
+  ],
+  "train_minutes": 36.4
+}

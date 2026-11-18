@@ -1,0 +1,13 @@
+{
+  "parameters": 659968,
+  "vocab_size": 219,
+  "steps": 2000,
+  "best_val_loss_heldout_profiles": 0.03015124114851157,
+  "valid_narratives_seen_profiles": 1.0,
+  "valid_narratives_heldout_profiles": 1.0,
+  "example_problems_seen": [],
+  "example_problems_heldout": [],
+  "distinct_profiles_total": 4390,
+  "heldout_profiles": 219,
+  "train_minutes": 17.8
+}
